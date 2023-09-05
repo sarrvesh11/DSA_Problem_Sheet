@@ -1,0 +1,10 @@
+Node *deleteLast(Node *list){
+    // Write your code here
+    Node* prev=list;
+    Node* Next=list->next;
+    while(Next->next!=NULL){
+        Next=Next->next;
+        prev=prev->next;
+    }prev->next=NULL;
+    return list;
+}
